@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  width: 100%;
+  padding: 20px;
+}
+
+.form-card {
+  max-width: 420px;
+  margin: auto;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+h2 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+}
+
+.input-group.invalid input,
+.input-group.invalid textarea,
+.input-group.invalid select {
+  border-color: #ffb3b3;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: rgba(255,255,255,0.7);
+  transition: 0.3s;
+}
+
+textarea ~ label {
+  top: 18px;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -8px;
+  font-size: 12px;
+  color: #ffd86b;
+}
+
+small {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffd86b, #ff9f43);
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#resetBtn {
+  background: transparent;
+  border: 1px solid #ffd86b;
+  color: #ffd86b;
+}
+
+#status {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
